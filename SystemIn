@@ -1,0 +1,32 @@
+public class SystemIn {
+        public static void main(String[] args) throws java.io.IOException {
+            int max, min; // переменные для хранения пределов символов алфавита в Unicode
+            String in;
+            max = 90;
+            min = 65;
+            int simvol; // промежуточная переменная для хранения результата из метода rnd
+            char ch, answer;// переменная для хранения случайной буквы и буквы выбранной пользователем
+            simvol = rnd(max, min);
+            answer = (char) simvol;
+            System.out.println("Зaдyмaнa буква из диапазона A-Z.");
+            System.out.print("Пoпытaйтecь ее угадать: ");
+
+            ch = (char) System.in.read(); // получить символ с клавиатуры
+            if (ch == answer){
+                System.out.println("** Правильно! **");
+            }
+            else {
+                System.out.print("... Извинитe, нужная буква находится ");
+                if (ch < answer)
+                    System.out.println("ближe к концу алфавита");
+                else
+                    System.out.println("ближe к началу алфавита");
+            }
+
+        }
+        public static int rnd(int max,int min){
+            max-=min;
+            return (int) (Math.random()* ++max)+min;
+        }
+
+}
