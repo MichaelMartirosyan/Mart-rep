@@ -11,6 +11,8 @@ public class Avg {
             sum+=i;
         }
         System.out.println("Среднее арифметическое = " + sum/s.length);
+		
+		//just for test
 
     }
     
