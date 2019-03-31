@@ -13,6 +13,8 @@ public class Avg {
         System.out.println("Среднее арифметическое = " + sum/s.length);
 		
 		//just for test
+		
+		//new commit 1
 
     }
     
